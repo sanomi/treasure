@@ -14,6 +14,10 @@ h2 {
 	font-size: 5em;
 }
 
+h1 {
+	text-align: center;
+}
+
 #game {
 	margin: 0px auto;
 	max-width: 750px;

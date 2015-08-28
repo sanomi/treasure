@@ -24,6 +24,7 @@ $(document).ready( function() {
 			event.preventDefault();
 			if ( currentGameState === 'on' && remainingTurns > 0) {
 				if ( $boxClicked.hasClass('winner') ) {
+					$('#inst').empty();
 					$boxClicked.css("background-image" , "url('diamonds.png')")
 					.css('background-size', 'cover');
 					remainingTurns= remainingTurns - 1;
@@ -33,6 +34,10 @@ $(document).ready( function() {
 					return;
 				} else { 
 					$boxClicked.css("background-image" , "url('dead_fish.png')");
+					if (remainingTurns === 3) {
+						$('#inst').empty();
+					}
+					$('#inst').append('OUCH! ');
 					remainingTurns= remainingTurns - 1;
 					changeRemainingturns(remainingTurns);
 					if (remainingTurns === 0 ) {
