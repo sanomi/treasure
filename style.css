@@ -1,0 +1,12 @@
+.box {
+	float: left;
+	width: 200px;
+	height: 200px;
+	background-color: black;
+	margin: 10px 10px;
+}
+
+#turns {
+	clear: left;
+}
+
